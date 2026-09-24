@@ -19,7 +19,9 @@ export const site = {
   email: 'info@biinsaat.com',
   phoneDisplay: '0 542 208 68 44',
   phoneHref: '+905422086844',
-  whatsappHref: '905422086844',
+  // Site genelindeki WhatsApp butonları (sabit buton, üst menü, CTA şeridi)
+  // bu numaraya gider — Cem İkizoğlu.
+  whatsappHref: '905322465729',
   regions: ['İstanbul', 'Fethiye ve Çevresi'],
   values: ['Planlı', 'Kaliteli', 'Zamanında', 'Güvenli', 'Sürdürülebilir'],
   promise: ['Güven', 'Kalite', 'Zamanında Teslim'],
