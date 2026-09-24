@@ -12,9 +12,10 @@ const manrope = Manrope({
   display: 'swap',
 });
 
+// Caveat değişken (variable) bir fonttur: sabit weight listesi verilirse
+// next/font derleme sırasında hata veriyor. Ağırlık CSS'te ayarlanıyor.
 const caveat = Caveat({
-  subsets: ['latin', 'latin-ext'],
-  weight: ['600', '700'],
+  subsets: ['latin', 'latin-ext', 'cyrillic'],
   variable: '--font-script',
   display: 'swap',
 });
