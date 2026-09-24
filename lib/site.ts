@@ -17,10 +17,11 @@ export const site = {
     full: 'Maslak Meydan Sokak No:5, Spring Giz Plaza, İç Kapı No:9, Sarıyer / İstanbul / Türkiye',
   },
   email: 'info@biinsaat.com',
-  phoneDisplay: '0 542 208 68 44',
-  phoneHref: '+905422086844',
-  // Site genelindeki WhatsApp butonları (sabit buton, üst menü, CTA şeridi)
-  // bu numaraya gider — Cem İkizoğlu.
+  // Site genelindeki telefon ve WhatsApp butonları (üst şerit, "Teklif Alın",
+  // sabit buton, mobil menü, CTA şeridi) bu numaraya gider — Cem İkizoğlu.
+  // Kişiye özel numaralar aşağıdaki `people` dizisinde tutulur.
+  phoneDisplay: '0 532 246 57 29',
+  phoneHref: '+905322465729',
   whatsappHref: '905322465729',
   regions: ['İstanbul', 'Fethiye ve Çevresi'],
   values: ['Planlı', 'Kaliteli', 'Zamanında', 'Güvenli', 'Sürdürülebilir'],
