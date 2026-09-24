@@ -32,7 +32,7 @@ export default function ProjectsPreview() {
                 <div className="relative">
                   <SmartImage
                     src={p.image}
-                    alt={`${p.title} — ${p.category}`}
+                    alt={p.imageAlt}
                     label={p.category}
                     className="aspect-4/3 w-full"
                     imgClassName="transition-transform duration-700 group-hover:scale-105"

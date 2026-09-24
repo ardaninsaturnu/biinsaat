@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+import { useState } from 'react';
 
 type Props = {
   src: string;
@@ -10,7 +11,34 @@ type Props = {
   /** Görsel bulunamazsa yer tutucunun üzerinde görünecek etiket */
   label?: string;
   priority?: boolean;
+  /** Yer tutucu biçimi: blueprint çizimi ya da baş harf monogramı */
+  placeholder?: 'blueprint' | 'monogram';
+  /** Görselin sayfadaki yaklaşık genişliği (responsive boyutlandırma için) */
+  sizes?: string;
 };
+
+/** Kişi fotoğrafı yerine baş harflerden oluşan monogram. */
+function Monogram({ label }: { label?: string }) {
+  const initials = (label ?? '')
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join('')
+    .toLocaleUpperCase('tr-TR');
+
+  return (
+    <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-navy-700 via-navy-800 to-navy-950">
+      <span className="text-4xl font-extrabold tracking-tight text-brand-200/85">{initials || 'Bİ'}</span>
+      <span className="mt-2 h-px w-8 bg-brand-300/40" />
+      {label && (
+        <span className="mt-2 px-3 text-center text-[0.6rem] font-bold uppercase tracking-[0.16em] text-brand-100/55">
+          {label}
+        </span>
+      )}
+    </div>
+  );
+}
 
 /** Blueprint tarzı markalı yer tutucu çizimi. */
 function Placeholder({ label }: { label?: string }) {
@@ -38,34 +66,33 @@ function Placeholder({ label }: { label?: string }) {
 }
 
 /**
- * Fotoğraf dosyası henüz public/images içine eklenmemişse kırık görsel yerine
- * markalı bir yer tutucu gösterir. Kontrol, hidrasyondan önce yüklenmeyi
- * kaçırmamak için mount anında da yapılır.
+ * next/image üzerinden optimize edilmiş (WebP/AVIF, responsive) görsel.
+ * Dosya public/images içinde yoksa kırık görsel yerine markalı yer tutucu kalır.
  */
-export default function SmartImage({ src, alt, className = '', imgClassName = '', label, priority }: Props) {
-  const ref = useRef<HTMLImageElement>(null);
+export default function SmartImage({
+  src,
+  alt,
+  className = '',
+  imgClassName = '',
+  label,
+  priority,
+  placeholder = 'blueprint',
+  sizes = '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px',
+}: Props) {
   const [failed, setFailed] = useState(false);
-
-  useEffect(() => {
-    const img = ref.current;
-    if (!img) return;
-    // Hidrasyondan önce yüklenmeyi bitirmiş (ya da hata vermiş) görselleri yakala.
-    if (img.complete && img.naturalWidth === 0) setFailed(true);
-  }, []);
 
   return (
     <div className={`relative overflow-hidden bg-navy-900 ${className}`}>
-      <Placeholder label={label} />
+      {placeholder === 'monogram' ? <Monogram label={label} /> : <Placeholder label={label} />}
       {!failed && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          ref={ref}
+        <Image
           src={src}
           alt={alt}
-          loading={priority ? 'eager' : 'lazy'}
-          decoding="async"
+          fill
+          sizes={sizes}
+          priority={priority}
           onError={() => setFailed(true)}
-          className={`relative h-full w-full object-cover ${imgClassName}`}
+          className={`object-cover ${imgClassName}`}
         />
       )}
     </div>

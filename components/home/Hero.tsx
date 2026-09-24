@@ -68,7 +68,7 @@ export default function Hero() {
         <div className="relative">
           <SmartImage
             src="/images/hero-santiye.jpg"
-            alt="Bİ İnşaat şantiyesinde devam eden betonarme karkas imalatı"
+            alt="Kule vinç eşliğinde yükselen betonarme yapı"
             label="Şantiye Görseli"
             priority
             className="aspect-4/5 w-full rounded-3xl shadow-2xl shadow-black/40 ring-1 ring-white/10 sm:aspect-3/4 lg:aspect-4/5"
@@ -84,7 +84,7 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="absolute -right-3 top-6 hidden rounded-2xl bg-white/10 px-4 py-3 backdrop-blur sm:block">
+          <div className="absolute -right-3 top-6 hidden rounded-2xl border border-white/15 bg-navy-950/75 px-4 py-3 backdrop-blur sm:block">
             <ul className="space-y-1.5 text-xs font-semibold text-white">
               {site.values.map((v) => (
                 <li key={v} className="flex items-center gap-2">

@@ -39,7 +39,7 @@ export default function HakkimizdaPage() {
         <div className="container-x grid items-center gap-12 lg:grid-cols-2">
           <SmartImage
             src="/images/hakkimizda-santiye.jpg"
-            alt="Bİ İnşaat şantiyesinde beton dökümü sırasında çalışan ekip"
+            alt="Şantiyede demir donatı bağlayan usta"
             label="Saha Görseli"
             className="aspect-4/3 w-full rounded-3xl"
           />

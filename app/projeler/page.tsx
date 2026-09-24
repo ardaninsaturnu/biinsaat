@@ -33,7 +33,7 @@ export default function ProjelerPage() {
                 <div className="relative">
                   <SmartImage
                     src={p.image}
-                    alt={`${p.title} — ${p.category}, ${p.location}`}
+                    alt={p.imageAlt}
                     label={p.category}
                     className="aspect-16/10 w-full"
                     imgClassName="transition-transform duration-700 group-hover:scale-105"

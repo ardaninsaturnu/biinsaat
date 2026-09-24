@@ -198,6 +198,8 @@ export type Project = {
   status: string;
   summary: string;
   image: string;
+  /** Fotoğrafta gerçekte ne göründüğü (erişilebilirlik için) */
+  imageAlt: string;
   facts: { label: string; value: string }[];
 };
 
@@ -211,6 +213,7 @@ export const projects: Project[] = [
     summary:
       'Körfeze bakan eğimli arazide, havuzlu ve geniş teraslı müstakil villalar. Doğal taş, ahşap ve geniş cam yüzeylerin bir arada kullanıldığı bir yaşam kurgusu.',
     image: '/images/project-fethiye-villa.jpg',
+    imageAlt: 'Havuzlu, geniş cam cepheli modern beyaz villa',
     facts: [
       { label: 'Tip', value: 'Müstakil Villa' },
       { label: 'Kapsam', value: 'Anahtar Teslim' },
@@ -226,6 +229,7 @@ export const projects: Project[] = [
     summary:
       'Şehir içinde, ortak yaşam alanlarını öne çıkaran çok katlı konut bloğu. Planlı şantiye yönetimi ve sıkı kalite kontrolüyle yürütülüyor.',
     image: '/images/project-istanbul-konut.jpg',
+    imageAlt: 'Çok katlı konut bloklarından oluşan yerleşim',
     facts: [
       { label: 'Tip', value: 'Çok Katlı Konut' },
       { label: 'Kapsam', value: 'Kaba + İnce İnşaat' },
@@ -241,6 +245,7 @@ export const projects: Project[] = [
     summary:
       'Ofis ve mağaza kullanımını bir arada barındıran, cephe detaylarıyla öne çıkan ticari yapı. İşletmenin açılış takvimine göre planlanan hızlı uygulama.',
     image: '/images/project-ticari.jpg',
+    imageAlt: 'Tuğla ve cam cepheli modern ofis binası',
     facts: [
       { label: 'Tip', value: 'Ofis & Mağaza' },
       { label: 'Kapsam', value: 'Anahtar Teslim' },
@@ -256,6 +261,7 @@ export const projects: Project[] = [
     summary:
       'Doğayla iç içe, az katlı ve geniş bahçeli yaşam alanları. Sürdürülebilir malzeme seçimi ve düşük enerji tüketimi hedefiyle kurgulanıyor.',
     image: '/images/project-modern-yasam.jpg',
+    imageAlt: 'Çam ormanı içinde, geniş bahçeli az katlı modern konut',
     facts: [
       { label: 'Tip', value: 'Az Katlı Konut' },
       { label: 'Kapsam', value: 'Proje Geliştirme' },
@@ -271,6 +277,7 @@ export const projects: Project[] = [
     summary:
       'Daire, ofis ve villa tadilatlarında net keşif, net fiyat ve net süre. Yaşarken tadilat gereken işlerde etaplı çalışma modeli.',
     image: '/images/project-tadilat.jpg',
+    imageAlt: 'Tadilat hâlindeki bir iç mekânda boya uygulaması yapan usta',
     facts: [
       { label: 'Tip', value: 'İç Mekân' },
       { label: 'Kapsam', value: 'Tadilat & Onarım' },
@@ -286,6 +293,7 @@ export const projects: Project[] = [
     summary:
       'Eğimli arazilerde güvenliği sağlayan istinat duvarları ve yapının karakterini tamamlayan doğal taş cephe uygulamaları.',
     image: '/images/project-tas-duvar.jpg',
+    imageAlt: 'Bahçe kenarında örülmüş doğal taş duvar',
     facts: [
       { label: 'Tip', value: 'Dış Mekân' },
       { label: 'Kapsam', value: 'Taş Duvar & İstinat' },

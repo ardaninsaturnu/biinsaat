@@ -6,6 +6,7 @@ const regions = [
   {
     city: 'İstanbul',
     image: '/images/bolge-istanbul.jpg',
+    alt: 'Boğaz ve tarihi yarımada ile İstanbul silüeti',
     script: 'Daha güçlü yarınlara…',
     text: 'Maslak’taki merkezimizden yürüttüğümüz konut, ofis ve tadilat projeleri; şehrin yoğun temposuna uygun, planlı şantiye yönetimi.',
     items: ['Konut ve ofis projeleri', 'Tadilat ve güçlendirme', 'Proje geliştirme'],
@@ -13,6 +14,7 @@ const regions = [
   {
     city: 'Fethiye ve Çevresi',
     image: '/images/bolge-fethiye.jpg',
+    alt: 'Turkuaz koya bakan çam ağacı ve Fethiye kıyı şeridi',
     script: 'Doğayla yaşayan yapılar…',
     text: 'Körfez manzaralı arazilerde villa ve az katlı konut uygulamaları; taş duvar, peyzaj ve havuz işleriyle birlikte.',
     items: ['Villa projeleri', 'Taş duvar ve istinat', 'Havuz ve peyzaj'],
@@ -35,7 +37,7 @@ export default function Regions() {
             <article key={r.city} className="group relative overflow-hidden rounded-3xl bg-navy-900">
               <SmartImage
                 src={r.image}
-                alt={`${r.city} bölgesindeki Bİ İnşaat projeleri`}
+                alt={r.alt}
                 label={r.city}
                 className="aspect-16/10 w-full"
                 imgClassName="opacity-70 transition-transform duration-700 group-hover:scale-105"

@@ -51,7 +51,7 @@ export default function WhyUs() {
 
           <SmartImage
             src="/images/hakkimizda-ekip.jpg"
-            alt="Bİ İnşaat yönetici ortakları şantiyede proje üzerinde çalışırken"
+            alt="Temel donatısı serilmiş şantiye alanında çalışan işçiler"
             label="Ekip Görseli"
             className="mt-8 aspect-16/10 w-full rounded-2xl"
           />

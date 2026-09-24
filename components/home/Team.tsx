@@ -23,6 +23,8 @@ export default function Team() {
                   src={p.photo}
                   alt={`${p.name} — ${p.role}`}
                   label={p.name}
+                  placeholder="monogram"
+                  sizes="(max-width: 640px) 100vw, 144px"
                   className="aspect-square w-full shrink-0 rounded-xl sm:h-36 sm:w-36"
                 />
                 <div className="flex flex-col">
