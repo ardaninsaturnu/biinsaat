@@ -36,6 +36,15 @@ npm run dev
 
 Site `http://localhost:3000` adresinde açılır.
 
+> **Not:** `npm run dev` çalışırken ayrı bir terminalde `npm run build`
+> çalıştırmayın. İkisi de `.next/` klasörünü kullanır ve build, dev
+> sunucusunun dosyalarını ezerek `Cannot find module './611.js'` benzeri
+> hatalara yol açar. Böyle bir hata görürseniz çözümü:
+>
+> ```bash
+> rm -rf .next && npm run dev
+> ```
+
 ## Fotoğraflar
 
 Tüm fotoğraflar `public/images/` klasörüne gider. Hangi dosyanın nereye
