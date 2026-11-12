@@ -15,7 +15,11 @@ export default function Team() {
           text="Deneyimli mühendislerimiz, ustalarımız ve saha ekibimizle projelerinizi güvenle hayata geçiriyoruz."
         />
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div
+          className={`mt-12 grid gap-5 ${
+            people.length > 1 ? 'md:grid-cols-2' : 'mx-auto max-w-2xl'
+          }`}
+        >
           {people.map((p, i) => (
             <Reveal key={p.name} delay={i * 90}>
               <article className="flex h-full flex-col gap-5 rounded-2xl border border-navy-100 bg-white p-5 sm:flex-row sm:p-6">

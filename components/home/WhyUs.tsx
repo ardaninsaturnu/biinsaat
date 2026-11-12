@@ -7,7 +7,7 @@ const reasons = [
   {
     icon: 'helmet',
     title: 'Sahada yönetici var',
-    text: 'Projeyi taşeronun insafına bırakmıyoruz. Ortaklarımız sahada; kararlar gecikmeden alınıyor.',
+    text: 'Projeyi taşeronun insafına bırakmıyoruz. Yönetici ortağımız sahada; kararlar gecikmeden alınıyor.',
   },
   {
     icon: 'shield',

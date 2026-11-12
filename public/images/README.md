@@ -24,11 +24,10 @@ yerine markalı bir yer tutucu görünür. Fotoğrafı değiştirmek için aynı
 
 | Dosya adı | Nerede görünür | Ölçü |
 |---|---|---|
-| `team-umit-guven.jpg` | Ekip kartı — Ümit Güven | 800×800 (kare) |
 | `team-cem-ikizoglu.jpg` | Ekip kartı — Cem İkizoğlu | 800×800 (kare) |
 
-Bu ikisi için şu an baş harflerden oluşan bir monogram görünüyor. Gerçek
-portre fotoğraflarını bu isimlerle klasöre atınca otomatik yerlerini alırlar.
+Bunun için şu an baş harflerden oluşan bir monogram görünüyor. Gerçek
+portre fotoğrafını bu isimle klasöre atınca otomatik yerini alır.
 
 ## Önemli not — mevcut fotoğraflar geçicidir
 

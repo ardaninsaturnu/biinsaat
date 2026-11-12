@@ -42,17 +42,6 @@ export type Person = {
 
 export const people: Person[] = [
   {
-    name: 'Ümit Güven',
-    role: 'Kurucu Ortak / Yönetici',
-    roleEn: 'Co-Founder / Managing Partner',
-    phoneDisplay: '0 542 208 68 44',
-    phoneHref: '+905422086844',
-    whatsapp: '905422086844',
-    email: 'umitguven@biinsaat.com',
-    photo: '/images/team-umit-guven.jpg',
-    bio: 'Saha yönetimi, kaba inşaat ve uygulama süreçlerinin başında; projelerin ilk kazmadan anahtar teslimine kadar her aşamasını bizzat takip ediyor.',
-  },
-  {
     name: 'Cem İkizoğlu',
     role: 'Yönetici / Ortak',
     roleEn: 'Managing Partner',
@@ -61,7 +50,7 @@ export const people: Person[] = [
     whatsapp: '905322465729',
     email: 'cem@biinsaat.com',
     photo: '/images/team-cem-ikizoglu.jpg',
-    bio: 'Proje geliştirme, tasarım koordinasyonu ve yatırım danışmanlığı tarafını yürütüyor; arsadan projeye giden yolu planlıyor.',
+    bio: 'Proje geliştirmeden saha uygulamasına kadar süreci tek elden yürütüyor; arsadan projeye giden yolu planlıyor, şantiyede işin başında duruyor.',
   },
 ];
 

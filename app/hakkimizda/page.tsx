@@ -52,7 +52,7 @@ export default function HakkimizdaPage() {
                 her başlığı konuşup rakama döküyor; ortaya çıkan planı sözleşmeye bağlıyoruz.
               </p>
               <p>
-                Şantiyede iki yönetici ortağımız bizzat bulunuyor. Karar gerektiren bir konu çıktığında günlerce
+                Şantiyede yönetici ortağımız bizzat bulunuyor. Karar gerektiren bir konu çıktığında günlerce
                 bekleyen bir onay zinciri yok; iş yerinde ve zamanında çözülüyor.
               </p>
               <p>
